@@ -1,0 +1,359 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    color: #7df9ff;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #7df9ff;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    height: 100vh;
+    padding: 0 50px;
+    background: linear-gradient(145deg, #111, #333);
+    animation: gradient 10s infinite alternate;
+}
+
+.title {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Typing Effect for First Line */
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #7df9ff;
+}
+
+.typing-line1 {
+    font-size: 2rem;
+    animation: typing-line1 3s steps(30, end), cursor-disappear 0.5s step-end 3s forwards;
+}
+
+.typing-line2 {
+    font-size: 2.5rem;
+    color: #7df9ff;
+    margin-top: 10px;
+    animation: typing-line2 4s steps(30, end) 4s forwards;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Keyframes for Typing */
+@keyframes typing-line1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typing-line2 {
+    from {
+        width: 0;
+        opacity: 1;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* Cursor Disappearance After "Your Name" */
+@keyframes cursor-disappear {
+    0% {
+        border-right-color: #7df9ff;
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+/* Gradient Background Animation */
+@keyframes gradient {
+    0% {
+        background: linear-gradient(145deg, #111, #333);
+    }
+    100% {
+        background: linear-gradient(145deg, #333, #111);
+    }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 80px 20px; /* Reduced padding on mobile */
+    }
+
+    .about-section h2 {
+        font-size: 2.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    .about-section p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Scroll effect */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 50px; /* Increased padding for better spacing */
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #7df9ff;
+    margin-bottom: 30px; /* Increased margin for better separation */
+    text-transform: uppercase;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section label {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.contact-section textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-section .submit-btn {
+    background-color: #7df9ff;
+    color: #222;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section .submit-btn:hover {
+    background-color: #4fc3e2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section p {
+        font-size: 1rem;
+    }
+}
+/* About Section Styling */
+.about-section {
+    padding: 100px 50px; /* Increased padding for more space */
+    background: #222;
+    color: #fff;
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+    border: 5px solid #7df9ff; /* Add a border with color and thickness */
+    border-radius: 15px; /* Optional: add rounded corners */
+}
+
+/* Optional: Add a glowing effect around the border */
+.about-section:hover {
+    box-shadow: 0 0 20px rgba(125, 249, 255, 0.8);
+}
+
+.about-section h2 {
+    font-size: 3rem;
+    color: #7df9ff;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.about-section p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    padding-top: 20px;
+}
+
+.about-section p::first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #5AC9D8;
+}
+/* Read More Button Styling */
+.read-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #5AC9D8; /* Button color matching your theme */
+    color: #fff; /* White text */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded edges */
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for the Read More Button */
+.read-more-btn:hover {
+    background-color: #5AC9D8; /* Slightly darker shade on hover */
+    transform: translateY(-5px); /* Button lift effect */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Optional padding for responsiveness */
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center; /* Center the text inside the container */
+}
+
+.title {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #5AC9D8;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+}
+/* Social Media Links */
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    font-size: 28px; /* Slightly smaller size */
+    margin: 0 15px;  /* Adjusted margin for better spacing */
+    color: #fff;     /* White color for better visibility */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly smaller hover effect */
+    color: #0073e6;        /* Hover color change */
+}

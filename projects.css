@@ -1,0 +1,61 @@
+/* Projects Section */
+.projects-section {
+    background-color: #111;  /* Dark background for the section */
+    padding: 100px 0;  /* Increase the padding to create more space */
+    min-height: 600px;  /* Ensure the section has a larger, consistent height */
+    width: 100%;  /* Make the section span the full width of the page */
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 3rem;  /* Increase font size for better prominence */
+    color: #fff;  /* White color for the heading */
+    margin-bottom: 50px;  /* Increase bottom margin for better spacing */
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;  /* Increase the gap between project cards */
+    flex-wrap: wrap; /* Wrap the items if there's not enough space */
+    padding: 0 20px;
+}
+
+.project-card {
+    background-color: #222;  /* Dark card background */
+    border-radius: 10px;  /* Increase the border radius for a smoother look */
+    padding: 30px;  /* Increase padding for more content space */
+    width: 30%; /* Each project takes up 30% of the width, can be adjusted */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Increased shadow for a more elevated look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);  /* Make hover effect more pronounced */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);  /* Darker shadow on hover for more depth */
+}
+
+.project-card h3 {
+    font-size: 1.8rem;  /* Larger font size for project titles */
+    color: #fff;  /* White text for project titles */
+    margin-bottom: 20px;  /* Add more spacing between title and description */
+}
+
+.project-card p {
+    color: #bbb;  /* Light gray text for description */
+    font-size: 1.1rem;  /* Slightly larger font size for description */
+    margin-bottom: 20px;  /* Add space below project description */
+}
+
+.project-card a {
+    color: #00bcd4;  /* Light blue color for the links */
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #ff4081;  /* Change color on hover for interactivity */
+}
